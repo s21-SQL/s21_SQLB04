@@ -1,4 +1,4 @@
-# Day 03 - Piscine SQL
+# Day 03 — SQL Bootcamp
 
 ## _Continuing to JOIN and make change in data_
 
@@ -15,33 +15,33 @@ Resume: Today you will see how to change data based on DML language.
 3. [Chapter III](#chapter-iii) \
     3.1. [Rules of the day](#rules-of-the-day)  
 4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Let’s find appropriate prices for Kate](#exercise-00-lets-find-appropriate-prices-for-kate)  
+    4.1. [Exercise 00 — Let’s find appropriate prices for Kate](#exercise-00-lets-find-appropriate-prices-for-kate)  
 5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Let’s find forgotten menus](#exercise-01-lets-find-forgotten-menus)  
+    5.1. [Exercise 01 — Let’s find forgotten menus](#exercise-01-lets-find-forgotten-menus)  
 6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Let’s find forgotten pizza and pizzerias](#exercise-02-lets-find-forgotten-pizza-and-pizzerias)  
+    6.1. [Exercise 02 — Let’s find forgotten pizza and pizzerias](#exercise-02-lets-find-forgotten-pizza-and-pizzerias)  
 7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Let’s compare visits](#exercise-03-lets-compare-visits)  
+    7.1. [Exercise 03 — Let’s compare visits](#exercise-03-lets-compare-visits)  
 8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Let’s compare orders](#exercise-04-lets-compare-orders)
+    8.1. [Exercise 04 — Let’s compare orders](#exercise-04-lets-compare-orders)
 9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Visited but did not make any order](#exercise-05-visited-but-did-not-make-any-order)
+    9.1. [Exercise 05 — Visited but did not make any order](#exercise-05-visited-but-did-not-make-any-order)
 10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Find price-similarity pizzas](#exercise-06-find-price-similarity-pizzas)
+    10.1. [Exercise 06 — Find price-similarity pizzas](#exercise-06-find-price-similarity-pizzas)
 11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Let’s cook a new type of pizza](#exercise-07-lets-cook-a-new-type-of-pizza)
+    11.1. [Exercise 07 — Let’s cook a new type of pizza](#exercise-07-lets-cook-a-new-type-of-pizza)
 12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Let’s cook a new type of pizza with more dynamics](#exercise-08-lets-cook-a-new-type-of-pizza-with-more-dynamics)
+    12.1. [Exercise 08 — Let’s cook a new type of pizza with more dynamics](#exercise-08-lets-cook-a-new-type-of-pizza-with-more-dynamics)
 13. [Chapter XIII](#chapter-xiii) \
-    13.1. [Exercise 09 - New pizza means new visits](#exercise-09-new-pizza-means-new-visits)
+    13.1. [Exercise 09 — New pizza means new visits](#exercise-09-new-pizza-means-new-visits)
 14. [Chapter XIV](#chapter-xiv) \
-    14.1. [Exercise 10 - New visits means new orders](#exercise-10-new-visits-means-new-orders)
+    14.1. [Exercise 10 — New visits means new orders](#exercise-10-new-visits-means-new-orders)
 15. [Chapter XV](#chapter-xv) \
-    15.1. [Exercise 11 - “Improve” a price for clients](#exercise-11-improve-a-price-for-clients)    
+    15.1. [Exercise 11 — “Improve” a price for clients](#exercise-11-improve-a-price-for-clients)    
 16. [Chapter XVI](#chapter-xvi) \
-    16.1. [Exercise 12 - New orders are coming!](#exercise-12-new-orders-are-coming)
+    16.1. [Exercise 12 — New orders are coming!](#exercise-12-new-orders-are-coming)
 17. [Chapter XVII](#chapter-xvii) \
-    17.1. [Exercise 13 - Money back to our customers](#exercise-13-money-back-to-our-customers)
+    17.1. [Exercise 13 — Money back to our customers](#exercise-13-money-back-to-our-customers)
 
 ## Chapter I
 ## Preamble
@@ -105,35 +105,35 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
-- field id - primary key
-- field name - name of pizzeria
-- field rating - average rating of pizzeria (from 0 to 5 points)
+- field id — primary key
+- field name — name of pizzeria
+- field rating — average rating of pizzeria (from 0 to 5 points)
 2. **person** table (Dictionary Table with persons who loves pizza)
-- field id - primary key
-- field name - name of person
-- field age - age of person
-- field gender - gender of person
-- field address - address of person
+- field id — primary key
+- field name — name of person
+- field age — age of person
+- field gender — gender of person
+- field address — address of person
 3. **menu** table (Dictionary Table with available menu and price for concrete pizza)
-- field id - primary key
-- field pizzeria_id - foreign key to pizzeria
-- field pizza_name - name of pizza in pizzeria
-- field price - price of concrete pizza
+- field id — primary key
+- field pizzeria_id — foreign key to pizzeria
+- field pizza_name — name of pizza in pizzeria
+- field price — price of concrete pizza
 4. **person_visits** table (Operational Table with information about visits of pizzeria)
-- field id - primary key
-- field person_id - foreign key to person
-- field pizzeria_id - foreign key to pizzeria
-- field visit_date - date (for example 2022-01-01) of person visit 
+- field id — primary key
+- field person_id — foreign key to person
+- field pizzeria_id — foreign key to pizzeria
+- field visit_date — date (for example 2022-01-01) of person visit 
 5. **person_order** table (Operational Table with information about persons orders)
-- field id - primary key
-- field person_id - foreign key to person
-- field menu_id - foreign key to menu
-- field order_date - date (for example 2022-01-01) of person order 
+- field id — primary key
+- field person_id — foreign key to person
+- field menu_id — foreign key to menu
+- field order_date — date (for example 2022-01-01) of person order 
 
 Persons' visit and persons' order are different entities and don't contain any correlation between data. For example, a client can be in one restraunt (just looking at menu) and in this time make an order in different one by phone or by mobile application. Or another case,  just be at home and again make a call with order without any visits.
 
 ## Chapter IV
-## Exercise 00 - Let’s find appropriate prices for Kate
+## Exercise 00 — Let’s find appropriate prices for Kate
 
 | Exercise 00: Let’s find appropriate prices for Kate |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -153,7 +153,7 @@ Please write a SQL statement that returns a list of pizza names, pizza prices, p
 
 
 ## Chapter V
-## Exercise 01 - Let’s find forgotten menus
+## Exercise 01 — Let’s find forgotten menus
 
 | Exercise 01: Let’s find forgotten menus|                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -174,7 +174,7 @@ Find all menu identifiers that are not ordered by anyone. The result should be s
 
 
 ## Chapter VI
-## Exercise 02 - Let’s find forgotten pizza and pizzerias
+## Exercise 02 — Let’s find forgotten pizza and pizzerias
 
 | Exercise 02: Let’s find forgotten pizza and pizzerias|                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -192,7 +192,7 @@ Please use the SQL statement from Exercise #01 and display the names of pizzas f
 | ... | ... | ... |
 
 ## Chapter VII
-## Exercise 03 - Let’s compare visits
+## Exercise 03 — Let’s compare visits
 
 | Exercise 03: Let’s compare visits |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -211,7 +211,7 @@ Please find pizzerias that have been visited more often by women or by men. Save
 | ... |
 
 ## Chapter VIII
-## Exercise 04 - Let’s compare orders
+## Exercise 04 — Let’s compare orders
 
 
 | Exercise 04: Let’s compare orders |                                                                                                                          |
@@ -229,7 +229,7 @@ Find a union of pizzerias that have orders from either women or men. In other wo
 | Papa Johns | 
 
 ## Chapter IX
-## Exercise 05 - Visited but did not make any order
+## Exercise 05 — Visited but did not make any order
 
 
 | Exercise 05: Visited but did not make any order |                                                                                                                          |
@@ -249,7 +249,7 @@ Write an SQL statement that returns a list of pizzerias that Andrey visited but 
 
 
 ## Chapter X
-## Exercise 06 - Find price-similarity pizzas
+## Exercise 06 — Find price-similarity pizzas
 
 
 | Exercise 06: Find price-similarity pizzas |                                                                                                                          |
@@ -267,7 +267,7 @@ Find the same pizza names that have the same price, but from different pizzerias
 | ... | ... | ... | ... |
 
 ## Chapter XI
-## Exercise 07 - Let’s cook a new type of pizza
+## Exercise 07 — Let’s cook a new type of pizza
 
 
 | Exercise 07: Let’s cook a new type of pizza |                                                                                                                          |
@@ -282,7 +282,7 @@ Please register a new pizza with the name "greek pizza" (use id = 19) with the p
 
 
 ## Chapter XII
-## Exercise 08 - Let’s cook a new type of pizza with more dynamics
+## Exercise 08 — Let’s cook a new type of pizza with more dynamics
 
 
 | Exercise 08: Let’s cook a new type of pizza with more dynamics |                                                                                                                          |
@@ -299,7 +299,7 @@ Please register a new pizza with the name "sicilian pizza" (whose id should be c
 
 
 ## Chapter XIII
-## Exercise 09 - New pizza means new visits
+## Exercise 09 — New pizza means new visits
 
 
 | Exercise 09: New pizza means new visits |                                                                                                                          |
@@ -316,7 +316,7 @@ Please record new visits to Domino's restaurant by Denis and Irina on February 2
 
 
 ## Chapter XIV
-## Exercise 10 - New visits means new orders
+## Exercise 10 — New visits means new orders
 
 
 | Exercise 10: New visits means new orders |                                                                                                                          |
@@ -334,7 +334,7 @@ Please register new orders from Denis and Irina on February 24, 2022 for the new
 
 
 ## Chapter XV
-## Exercise 11 - “Improve” a price for clients
+## Exercise 11 — “Improve” a price for clients
 
 
 | Exercise 11: “Improve” a price for clients|                                                                                                                          |
@@ -349,7 +349,7 @@ Please change the price of "greek pizza" to -10% of the current value.
 
 
 ## Chapter XVI
-## Exercise 12 - New orders are coming!
+## Exercise 12 — New orders are coming!
 
 
 | Exercise 12: New orders are coming!|                                                                                                                          |
@@ -371,7 +371,7 @@ Please register new orders of all persons for "greek pizza" on February 25, 2022
 
 
 ## Chapter XVII
-## Exercise 13 - Money back to our customers
+## Exercise 13 — Money back to our customers
 
 
 | Exercise 13: Money back to our customers|                                                                                                                          |
