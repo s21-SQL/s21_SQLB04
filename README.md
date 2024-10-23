@@ -48,7 +48,7 @@ Resume: Today you will see how to change data based on DML language.
 
 ![D03_01](misc/images/D03_01.png)
 
-Relation Theory is a mathematical foundation for modern Relational Databases. EEvery aspect of databases has a corresponding mathematical and logical justification. Including INSERT / UPDATE / DELETE operators. (Dr. Edgar Frank Codd is in the picture).
+Relation Theory is a mathematical foundation for modern Relational Databases. Every aspect of databases has a corresponding mathematical and logical justification. Including INSERT / UPDATE / DELETE operators. (Dr. Edgar Frank Codd is in the picture).
 
 How the INSERT operator works from a mathematical point of view.
 
