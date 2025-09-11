@@ -1,47 +1,50 @@
-# Day 03 — SQL Bootcamp
-
 ## _Continuing to JOIN and make change in data_
 
-Resume: Today you will see how to change data based on DML language.
+In this project you will learn how to extract data from a database using complex SQL queries and modify it with Data Manipulation Language (DML).
+
+These skills are essential if you're aiming to become a database specialist, analyst, developer, or business analyst.
+
+The ability to efficiently retrieve and modify data will be valuable when developing inventory systems, analyzing sales, personalizing services, or creating reports and dashboards.
+
 
 💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
 
+
 ## Contents
 
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 — Let’s find appropriate prices for Kate](#exercise-00-lets-find-appropriate-prices-for-kate)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 — Let’s find forgotten menus](#exercise-01-lets-find-forgotten-menus)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 — Let’s find forgotten pizza and pizzerias](#exercise-02-lets-find-forgotten-pizza-and-pizzerias)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 — Let’s compare visits](#exercise-03-lets-compare-visits)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 — Let’s compare orders](#exercise-04-lets-compare-orders)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 — Visited but did not make any order](#exercise-05-visited-but-did-not-make-any-order)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 — Find price-similarity pizzas](#exercise-06-find-price-similarity-pizzas)
-11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 — Let’s cook a new type of pizza](#exercise-07-lets-cook-a-new-type-of-pizza)
-12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 — Let’s cook a new type of pizza with more dynamics](#exercise-08-lets-cook-a-new-type-of-pizza-with-more-dynamics)
-13. [Chapter XIII](#chapter-xiii) \
-    13.1. [Exercise 09 — New pizza means new visits](#exercise-09-new-pizza-means-new-visits)
-14. [Chapter XIV](#chapter-xiv) \
-    14.1. [Exercise 10 — New visits means new orders](#exercise-10-new-visits-means-new-orders)
-15. [Chapter XV](#chapter-xv) \
-    15.1. [Exercise 11 — “Improve” a price for clients](#exercise-11-improve-a-price-for-clients)    
-16. [Chapter XVI](#chapter-xvi) \
-    16.1. [Exercise 12 — New orders are coming!](#exercise-12-new-orders-are-coming)
-17. [Chapter XVII](#chapter-xvii) \
-    17.1. [Exercise 13 — Money back to our customers](#exercise-13-money-back-to-our-customers)
+- [How to learn at «School 21»](#how-to-learn-at-school-21)
+- [Chapter I](#chapter-i)
+- [Preamble](#preamble)
+- [Chapter II](#chapter-ii)
+- [Rules of the day](#rules-of-the-day)
+- [Chapter III](#chapter-iii)
+- [Exercise 00 — Let’s find appropriate prices for Kate](#exercise-00--lets-find-appropriate-prices-for-kate)
+- [Exercise 01 — Let’s find forgotten menus](#exercise-01--lets-find-forgotten-menus)
+- [Exercise 02 — Let’s find forgotten pizza and pizzerias](#exercise-02--lets-find-forgotten-pizza-and-pizzerias)
+- [Exercise 03 — Let’s compare visits](#exercise-03--lets-compare-visits)
+- [Exercise 04 — Let’s compare orders](#exercise-04--lets-compare-orders)
+- [Exercise 05 — Visited but did not make any order](#exercise-05--visited-but-did-not-make-any-order)
+- [Exercise 06 — Find price-similarity pizzas](#exercise-06--find-price-similarity-pizzas)
+- [Exercise 07 — Let’s cook a new type of pizza](#exercise-07--lets-cook-a-new-type-of-pizza)
+- [Exercise 08 — Let’s cook a new type of pizza with more dynamics](#exercise-08--lets-cook-a-new-type-of-pizza-with-more-dynamics)
+- [Exercise 09 — New pizza means new visits](#exercise-09--new-pizza-means-new-visits)
+- [Exercise 10 — New visits means new orders](#exercise-10--new-visits-means-new-orders)
+- [Exercise 11 — “Improve” a price for clients](#exercise-11--improve-a-price-for-clients)
+- [Exercise 12 — New orders are coming!](#exercise-12--new-orders-are-coming)
+- [Exercise 13 — Money back to our customers](#exercise-13--money-back-to-our-customers)
+
+## How to learn at «School 21»
+1. «School 21» might feel different from your previous educational experiences. It emphasizes high autonomy: you’re given a task, and you must complete it. Throughout the course, you are expected to delve deeper into the subject and solve problems. Use all available means to find information—the resources of the internet are limitless. Be mindful of your sources (for example, if you use AI tools): verify, think, analyze, and compare.
+2. You will need to present your solution to other students and receive feedback from them. Peer-to-peer (P2P) learning is a process where students exchange knowledge and experience, simultaneously acting as both mentors and learners. This way you can learn not only from materials but also from each other.
+3. Don’t hesitate to ask for help: around you are peers who are also navigating this path for the first time. Likewise, don’t be afraid to respond to requests for help—your experience is valuable and useful, so share it openly with others. Join RocketChat to stay updated with the latest community announcements.
+4. Your learning will be meaningless if you simply copy others’ solutions. If you receive help, always make sure you fully understand the why, how, and purpose behind it. Don’t be afraid to make mistakes.
+5. If you’re stuck on something and feel like you’ve tried everything but still don’t know what to do—just take a break! Believe it or not, this advice has helped many professionals in their work. Step away, clear your mind, and the right solution might just come to you next time!
+6. The learning process is just as important as the result. It’s not just about solving the task—it’s about understanding how to solve it.
+
+How to work with the project: 
+1. Before starting, clone the project from GitLab into a repository of the same name.
+2. All code files must be created in the src/ folder of the cloned repository.
+3. After cloning, create a develop branch and push changes to it in GitLab. Push to GitLab in the develop branch as well.
 
 ## Chapter I
 ## Preamble
@@ -79,27 +82,17 @@ Let’s make a cheese of our data! :-)
 
 
 ## Chapter II
-## General Rules
-
-- Use this page as your only reference. Do not listen to rumors and speculations about how to prepare your solution.
-- Make sure you are using the latest version of PostgreSQL.
-- It is perfectly fine if you use the IDE to write source code (aka SQL script).
-- To be evaluated, your solution must be in your GIT repository.
-- Your solutions will be evaluated by your peers.
-- You should not leave any files in your directory other than those explicitly specified by the exercise instructions. It is recommended that you modify your `.gitignore` to avoid accidents.
-- Got a question? Ask your neighbor to the right. Otherwise, try your neighbor on the left.
-- Your reference manual: mates / Internet / Google. 
-- Read the examples carefully. You may need things not specified in the topic.
-- And may the SQL-Force be with you!
-Absolutely anything can be represented in SQL! Let's get started and have fun!
-
-## Chapter III
 ## Rules of the day
 
-- Please make sure you have your own database and access for it on your PostgreSQL cluster. 
+- Make sure you are using the latest version of PostgreSQL.
+- It is perfectly fine if you use the IDE to write source code (aka SQL script).
+- You should not leave any files in your directory other than those explicitly specified by the exercise instructions. It is recommended that you modify your `.gitignore' to avoid accidents. 
 - Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
-- All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at this section before you start.
-- Please take a look at the Logical View of our Database Model. 
+- All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
+- And may the SQL-Force be with you!
+- Absolutely anything can be represented in SQL! Let's get started and have fun!
+
+Please take a look at the Logical View of our Database Model. 
 
 ![schema](misc/images/schema.png)
 
@@ -132,7 +125,7 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 
 Persons' visit and persons' order are different entities and don't contain any correlation between data. For example, a client can be in one restraunt (just looking at menu) and in this time make an order in different one by phone or by mobile application. Or another case,  just be at home and again make a call with order without any visits.
 
-## Chapter IV
+## Chapter III
 ## Exercise 00 — Let’s find appropriate prices for Kate
 
 | Exercise 00: Let’s find appropriate prices for Kate |                                                                                                                          |
@@ -151,8 +144,6 @@ Please write a SQL statement that returns a list of pizza names, pizza prices, p
 | pepperoni pizza | 800 | DinoPizza | 2022-01-04 |
 | ... | ... | ... | ... |
 
-
-## Chapter V
 ## Exercise 01 — Let’s find forgotten menus
 
 | Exercise 01: Let’s find forgotten menus|                                                                                                                          |
@@ -173,7 +164,6 @@ Find all menu identifiers that are not ordered by anyone. The result should be s
 | ... |
 
 
-## Chapter VI
 ## Exercise 02 — Let’s find forgotten pizza and pizzerias
 
 | Exercise 02: Let’s find forgotten pizza and pizzerias|                                                                                                                          |
@@ -191,7 +181,6 @@ Please use the SQL statement from Exercise #01 and display the names of pizzas f
 | cheese pizza | 780 | DoDo Pizza |
 | ... | ... | ... |
 
-## Chapter VII
 ## Exercise 03 — Let’s compare visits
 
 | Exercise 03: Let’s compare visits |                                                                                                                          |
@@ -201,7 +190,10 @@ Please use the SQL statement from Exercise #01 and display the names of pizzas f
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
-Please find pizzerias that have been visited more often by women or by men. Save duplicates for any SQL operators with sets (UNION ALL, EXCEPT ALL, INTERSECT ALL constructions). Please sort a result by the name of the pizzeria. The sample data is shown below.
+Identify pizzerias that were visited more frequently by either females or males.
+When using set operations (UNION ALL, EXCEPT ALL, or INTERSECT ALL), retain duplicate rows.
+Sort the results by pizzeria name.
+Sample output is provided below.
 
 
 | pizzeria_name | 
@@ -210,7 +202,6 @@ Please find pizzerias that have been visited more often by women or by men. Save
 | Dominos |
 | ... |
 
-## Chapter VIII
 ## Exercise 04 — Let’s compare orders
 
 
@@ -221,14 +212,14 @@ Please find pizzerias that have been visited more often by women or by men. Save
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
-Find a union of pizzerias that have orders from either women or men. In other words, you should find a set of names of pizzerias that have been ordered only by women and make "UNION" operation with set of names of pizzerias that have been ordered only by men. Please be careful with word "only" for both genders. For all SQL operators with sets don't store duplicates (`UNION`, `EXCEPT`, `INTERSECT`).  Please sort a result by the name of the pizzeria. The sample data is shown below.
+Find the union of pizzerias that have received orders exclusively from females and those that have received orders exclusively from males. In other words, identify the sets of pizzerias ordered only by females and only by males, then perform a UNION operation on these sets. Note that the term "only" applies strictly to each gender group. When using set operators (UNION, EXCEPT, INTERSECT), do not include duplicates. Sort the results by the name of the pizzeria. Sample data is provided below.
+
 
 
 | pizzeria_name | 
 | ------ | 
 | Papa Johns | 
 
-## Chapter IX
 ## Exercise 05 — Visited but did not make any order
 
 
@@ -248,7 +239,6 @@ Write an SQL statement that returns a list of pizzerias that Andrey visited but 
 
 
 
-## Chapter X
 ## Exercise 06 — Find price-similarity pizzas
 
 
@@ -266,7 +256,7 @@ Find the same pizza names that have the same price, but from different pizzerias
 | cheese pizza | Best Pizza | Papa Johns | 700 |
 | ... | ... | ... | ... |
 
-## Chapter XI
+
 ## Exercise 07 — Let’s cook a new type of pizza
 
 
@@ -277,11 +267,10 @@ Find the same pizza names that have the same price, but from different pizzerias
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
-Please register a new pizza with the name "greek pizza" (use id = 19) with the price of 800 rubles in the restaurant "Dominos" (pizzeria_id = 2).
-**Warning**: this exercise is likely to cause the modification of data in the wrong way. Actually, you can restore the original database model with data from the [link](materials/model.sql).
+Add a new pizza named "Greek pizza" (id = 19) priced at 800 rubles to the "Dominos" restaurant (pizzeria_id = 2).
+**Important notes**: this exercise may modify data. You can restore the original database schema from the Materials folder.
 
 
-## Chapter XII
 ## Exercise 08 — Let’s cook a new type of pizza with more dynamics
 
 
@@ -294,11 +283,10 @@ Please register a new pizza with the name "greek pizza" (use id = 19) with the p
 | **Denied**                               |                                                                                                                          |
 | SQL Syntax Pattern                        | Don’t use direct numbers for identifiers of Primary Key and pizzeria                                                                                               |       
 
-Please register a new pizza with the name "sicilian pizza" (whose id should be calculated by the formula "maximum id value + 1") with the price of 900 rubles in the restaurant "Dominos" (please use internal query to get the identifier of the pizzeria).
-**Warning**: This exercise is likely to cause the modification of data in the wrong way. Actually, you can restore the original database model with data from the link in the "Rules of the day" section and replay the script from Exercise 07.
+Add a new pizza named "Sicilian pizza"(with an ID calculated as "maximum existing ID + 1") priced at 900 rubles in the "Dominos" restaurant (use a subquery to retrieve the pizzeria's identifier).
+**Important notes**: this exercise may modify data. You can restore the original database schema from the Materials folder and replay the script from Exercises 07.
 
 
-## Chapter XIII
 ## Exercise 09 — New pizza means new visits
 
 
@@ -311,11 +299,11 @@ Please register a new pizza with the name "sicilian pizza" (whose id should be c
 | **Denied**                               |                                                                                                                          |
 | SQL Syntax Pattern                        | Don’t use direct numbers for identifiers of Primary Key and pizzeria                                                                                               |       
 
-Please record new visits to Domino's restaurant by Denis and Irina on February 24, 2022.
-**Warning**: This exercise is likely to cause the modification of data in the wrong way. Actually, you can restore the original database model with data from the link in the "Rules of the Day" section and replay the script from Exercises 07 and 08.
+
+Please record new visits to the Domino's restaurant by Denis and Irina on February 24, 2022.
+**Important notes**: this exercise may modify data. You can restore the original database schema from the Materials folder and replay the script from Exercises 07, 08.
 
 
-## Chapter XIV
 ## Exercise 10 — New visits means new orders
 
 
@@ -329,11 +317,10 @@ Please record new visits to Domino's restaurant by Denis and Irina on February 2
 | SQL Syntax Pattern                        | Don’t use direct numbers for identifiers of Primary Key and pizzeria                                                                                               |     
 
 
-Please register new orders from Denis and Irina on February 24, 2022 for the new menu with "sicilian pizza".
-**Warning**: This exercise will probably cause you to change data in the wrong way. Actually, you can restore the original database model with data from the link in the Rules of the Day section and replay the script from Exercises 07, 08 and 09.
+Please register new orders from Denis and Irina on February 24, 2022, for the new menu item "Sicilian pizza."
+**Important notes**: this exercise may modify data. You can restore the original database schema from the Materials folder and replay the script from Exercises 07, 08, 09.
 
 
-## Chapter XV
 ## Exercise 11 — “Improve” a price for clients
 
 
@@ -344,11 +331,10 @@ Please register new orders from Denis and Irina on February 24, 2022 for the new
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
     
-Please change the price of "greek pizza" to -10% of the current value.
-**Warning**: This exercise is likely to cause you to change data in the wrong way. Actually, you can rebuild the original database model with data from the link in the "Rules of the Day" section and replay the script from Exercises 07, 08, 09, and 10.
+Please change the price of "greek pizza" to -10% of the current value. 
+**Important notes**: this exercise may modify data. You can restore the original database schema from the Materials folder and replay the script from Exercises 07, 08, 09, and 10.
 
 
-## Chapter XVI
 ## Exercise 12 — New orders are coming!
 
 
@@ -359,7 +345,7 @@ Please change the price of "greek pizza" to -10% of the current value.
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 | SQL Syntax Construction                        | `generate_series(...)`                                                                                              |
-| SQL Syntax Patten                        | Please use “insert-select” pattern
+| SQL Syntax Pattern                        | Please use “insert-select” pattern
 `INSERT INTO ... SELECT ...`|
 | **Denied**                               |                                                                                                                          |
 | SQL Syntax Patten                        | - Don’t use direct numbers for identifiers of Primary Key, and menu 
@@ -367,10 +353,9 @@ Please change the price of "greek pizza" to -10% of the current value.
 - Don’t use atomic `INSERT` statements |
 
 Please register new orders of all persons for "greek pizza" on February 25, 2022.
-**Warning**: This exercise will probably cause you to change data in the wrong way. Actually, you can restore the original database model with data from the link in the "Rules of the Day" section and replay the script from Exercises 07, 08, 09, 10 and 11.
+**Important notes**: this exercise may modify data. You can restore the original database schema from the Materials folder and replay the script from Exercises 07, 08, 09, 10, 11.
 
 
-## Chapter XVII
 ## Exercise 13 — Money back to our customers
 
 
@@ -382,4 +367,4 @@ Please register new orders of all persons for "greek pizza" on February 25, 2022
 | Language                        | ANSI SQL                                                                                              |
     
 Write 2 SQL (DML) statements that delete all new orders from Exercise #12 based on the order date. Then delete "greek pizza" from the menu. 
-**Warning**: This exercise is likely to cause you to modify data in the wrong way. Actually, you can rebuild the original database model with data from the link in the "Rules of the Day section" and replay the script from Exercises 07, 08, 09, 10, 11, 12, and 13.
+**Important notes**: this exercise may modify data. You can restore the original database schema from the Materials folder and replay the script from Exercises 07, 08, 09, 10, 11, 12, 13.
